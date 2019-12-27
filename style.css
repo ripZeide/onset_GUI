@@ -1,65 +1,75 @@
+.background {
+	right: 3%;
+	bottom: 7%;
+	position: fixed;
+}
+
 .background_life {
 	right: 5%;
 	bottom: 10%;
 	width: 455px;
 	height: 40px;
 	border-radius: 17px;
-	background-color: #808080;
-	position: fixed;
+	background-color: rgba(128, 128, 128, 1);
+	position: absolute;
 }
 
 .background_hunger {
-	top: -45%;
-	right: 5%;
+	top: -60px;
+	right: 20px;
 	width: 415px;
 	height: 33px;
 	border-radius: 17px;
-	background-color: #808080;
+	background-color: rgba(128, 128, 128, 1);
 	position: absolute;
 }
 
 .background_shield {
-	top: 80%;
-	left: 5%;
+	top: -7px;
+	right: 210px;
 	width: 224px;
 	height: 27px;
 	border-radius: 14px;
-	background-color: #808080;
+	background-color: rgba(128, 128, 128, 1);
 	position: absolute;
 }
 
 #life_bar {
-	position: absolute;
-	top: -18%;
-	left: 50%;
-	transform: translate(-50%, 50%);
-	width: 435px;
+	top: 17%;
+	left: 2%;
+	width: calc(var(--width, 0) * 1%);
 	height: 27px;
 	border-radius: 14px;
-	background-color: #059306;
-}
-
-#life_bar div {
-	width: 0;
-	height: 100%;
+	background-color: #14bf15;
+	position: absolute;
 }
 
 #life_bar_2 {
 	position: absolute;
-	top: 25%;
-	left: 50%;
-	transform: translate(-50%, 50%);
-	width: 410px;
+	top: 30%;
+	left: 5%;
+	width: calc(var(--width, 0) * 1%);
 	height: 5px;
 	border-radius: 3px;
-	background-color: #0ba60c;
+	background-color: #19d21a;
+}
+
+#back_life_bar {
+	top: 17%;
+	left: 2%;
+	width: 96%;
+	height: 27px;
+	border-radius: 14px;
+	background-color: rgba(33, 33, 33, 0.3);
+	/*border: solid;*/
+	position: absolute;
 }
 
 #shield_bar {
 	position: absolute;
 	top: 35%;
-	left: 4%;
-	width: 205px;
+	right: 4%;
+	width: calc(var(--width, 0) * 1%);
 	height: 12px;
 	border-radius: 6px;
 	background-color: #1954ff;
@@ -68,8 +78,8 @@
 #shield_bar_2 {
 	position: absolute;
 	top: 45%;
-	left: 7%;
-	width: 190px;
+	right: 7%;
+	width: calc(var(--width, 0) * 1%);
 	height: 3px;
 	border-radius: 2px;
 	background-color: #3669ff;
