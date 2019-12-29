@@ -1,0 +1,107 @@
+.background {
+	bottom: 14%;
+	animation-name: slide;
+  	animation-duration: 2s;
+  	animation-fill-mode: forwards;
+	position: fixed;
+}
+
+.back_phone {
+	right: 0%;
+	bottom: 0%;
+	width: 280px;
+	height: 575px;
+	border-radius: 35px;
+	background-color: #000000;
+	position: absolute;
+}
+
+.screen{
+	top: 0%;
+	left: 0%;
+}
+
+.screen_lock {
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background-image: url(wallpaper.png);
+	background-size: cover;
+	border: 7px solid #000;
+	border-radius: 35px;
+	position: absolute;
+}
+
+.back_phone:hover .screen_unlock{
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background-image: url(wallpaper2.png);
+	background-size: cover;
+	border: 7px solid #000;
+	border-radius: 35px;
+	position: absolute;
+}
+
+@keyframes slide {
+  from 	{right:-50%;}
+  to  	{right:4%;}
+}
+
+#camera {
+ 	height: 40px;
+	width: 40px;
+	background-color: black;
+ 	position: absolute;
+	top: -20px;
+ 	left: 45%;
+ 	clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+	transform: rotate(-45deg);
+ 	border-radius: 0 0 0 0.9em;
+}
+
+#lock {
+	bottom: 5%;
+	right: 46%;
+	position: absolute;
+	opacity: 50%;
+}
+
+#battery {
+	width: 7%;
+    height: auto;
+	top: 2.1%;
+	right: 5%;
+	position: absolute;
+	opacity: 80%;
+}
+
+#wifi {
+	width: 5%;
+    height: auto;
+	top: 2.5%;
+	right: 20%;
+	position: absolute;
+	opacity: 80%;
+}
+
+#signal {
+	width: 5%;
+    height: auto;
+	top: 2.5%;
+	right: 14%;
+	position: absolute;
+	opacity: 80%;
+}
+
+#hours {
+	top: 15%;
+	right: 28%;
+	position: absolute;
+	font-weight: 900;
+	font-family: bebas_r;
+	font-size: 150%;
+}
+
+@font-face {
+   font-family: bebas_r;
+   src: url(Bebas-Regular.otf);
+}
