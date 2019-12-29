@@ -9,7 +9,7 @@
 	bottom: 10%;
 	width: 455px;
 	height: 40px;
-	border-radius: 17px;
+	border-radius: 23px;
 	background-color: rgba(128, 128, 128, 1);
 	position: absolute;
 }
@@ -32,6 +32,33 @@
 	border-radius: 14px;
 	background-color: rgba(128, 128, 128, 1);
 	position: absolute;
+}
+
+.background_money {
+	top: -5px;
+	right: 20px;
+	width: 153px;
+	height: 33px;
+	border-radius: 17px;
+	background-color: rgba(128, 128, 128, 1);
+	position: absolute;
+}
+
+#money {
+	top: -50%;
+	right: 47%;
+	transform: translate(50%);
+	position: absolute;
+	color: #ffffff;
+	font-family: Impact;
+}
+
+#hp {
+	position: absolute;
+	top: -36%;
+	left: 47%;
+	color: #ffffff;
+	font-family: Impact;
 }
 
 #life_bar {
@@ -68,19 +95,31 @@
 #shield_bar {
 	position: absolute;
 	top: 35%;
-	right: 4%;
+	left: 4%;
 	width: calc(var(--width, 0) * 1%);
 	height: 12px;
 	border-radius: 6px;
-	background-color: #1954ff;
+	/*background-color: #1954ff;*/
+	background-color: #2295fa;
 }
 
 #shield_bar_2 {
 	position: absolute;
 	top: 45%;
-	right: 7%;
+	left: 7%;
 	width: calc(var(--width, 0) * 1%);
 	height: 3px;
 	border-radius: 2px;
-	background-color: #3669ff;
+	/*background-color: #3669ff;*/
+	background-color: #4f9ffb;
+}
+
+#back_shield_bar {
+position: absolute;
+	top: 35%;
+	left: 4%;
+	width: 92%;
+	height: 12px;
+	border-radius: 6px;
+	background-color: rgba(33, 33, 33, 0.3);
 }
