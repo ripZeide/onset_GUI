@@ -12,7 +12,7 @@
 		</div>
 		<div class="background_money">
 			<div id="money">
-				<h2>666<span>$</span></h2>
+				<span class="value">666</span> $
 			</div>
 		</div>
 		<div class="background_shield">
@@ -31,9 +31,17 @@
 				</div>
 			</div>
 			<div id="hp">
-				<h2>100<span></span></h2>
+				100
 			</div>
 		</div>
 	</div>
 </body>
+<script type="text/javascript" src="app.js"> </script>
+<script type="text/javascript">
+	setTimeout(function(){
+		changeValueBar("life", 5)
+		changeValueBar("shield", 5)
+		changeValueMoney(1500)
+	}, 1000)
+</script>
 </html>

@@ -21,7 +21,13 @@
 	left: 0%;
 }
 
-.screen_lock {
+.statubar
+{
+	position: relative;
+	z-index: 10000;
+}
+
+.screen_lock{
 	width: calc(100% - 10px);
 	height: calc(100% - 10px);
 	background-image: url(wallpaper.png);
@@ -31,14 +37,23 @@
 	position: absolute;
 }
 
-.back_phone:hover .screen_unlock{
+.screen_unlock{
 	width: calc(100% - 10px);
 	height: calc(100% - 10px);
-	background-image: url(wallpaper2.png);
+	background-image: url(wallpaper3.png);
 	background-size: cover;
 	border: 7px solid #000;
 	border-radius: 35px;
 	position: absolute;
+	opacity: 0;
+	transition: all .2s ease-in;
+	visibility: hidden;
+}
+
+.screen:hover .screen_unlock 
+{
+	opacity: 1;
+	visibility: visible;
 }
 
 @keyframes slide {
@@ -68,7 +83,7 @@
 #battery {
 	width: 7%;
     height: auto;
-	top: 2.1%;
+	top: 13.1px;
 	right: 5%;
 	position: absolute;
 	opacity: 80%;
@@ -77,8 +92,8 @@
 #wifi {
 	width: 5%;
     height: auto;
-	top: 2.5%;
-	right: 20%;
+	top: 14.5px;
+	right: 19%;
 	position: absolute;
 	opacity: 80%;
 }
@@ -86,8 +101,8 @@
 #signal {
 	width: 5%;
     height: auto;
-	top: 2.5%;
-	right: 14%;
+	top: 14.5px;
+	right: 13%;
 	position: absolute;
 	opacity: 80%;
 }
@@ -105,3 +120,93 @@
    font-family: bebas_r;
    src: url(Bebas-Regular.otf);
 }
+
+#volume_plus {
+	right: -3%;
+	top: 29%;
+	width: 7px;
+	height: 31px;
+	border-radius: 4px;
+	background-color: #000000;
+	position: absolute;
+}
+
+#volume_less {
+	right: -3%;
+	top: 22%;
+	width: 7px;
+	height: 31px;
+	border-radius: 4px;
+	background-color: #000000;
+	position: absolute;
+}
+
+#power_off {
+	left: -1%;
+	top: 25%;
+	width: 7px;
+	height: 31px;
+	border-radius: 4px;
+	background-color: #000000;
+	position: absolute;
+}
+
+#ic_message {
+	width: 50px;
+	height: auto;
+	right: 26%;
+	bottom: 5%;
+	position: absolute;
+}
+
+#app_call {
+	width: 50px;
+	height: auto;
+	left: 10%;
+	bottom: 5%;
+	position: absolute;
+}
+
+#app_contact {
+	width: 50px;
+	height: auto;
+	left: 33%;
+	bottom: 5%;
+	position: absolute;
+}
+
+#app_internet {
+	width: 50px;
+	height: auto;
+	right: 3%;
+	bottom: 5%;
+	position: absolute;
+}
+
+#app_bank{
+	width: 50px;
+	height: auto;
+	right: 3%;
+	bottom: 15%;
+	position: absolute;
+}
+
+#app_setting {
+	width: 50px;
+	height: auto;
+	right: 26%;
+	bottom: 15%;
+	position: absolute;
+}
+
+/*.chatbox:active {
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background-color: #000000;
+	border: 7px solid #000;
+	border-radius: 35px;
+	position: absolute;
+	opacity: 0;
+	transition: all .2s ease-in;
+	visibility: hidden;
+}*/

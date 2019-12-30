@@ -4,11 +4,32 @@
 	<meta charset="utf-8">
 	<title>Phone</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  	<script type="text/javascript" src="app.js"> </script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#ic_message').click(function(){
+				$('.chatbox').toggleClass('active');
+			})
+		})
+	</script>
 </head>
 <body>
 	<div class="background">
 		<div class="back_phone">
+			<div class="button">
+				<div id="volume_plus"></div>
+				<div id="volume_less"></div>
+				<div id="power_off"></div>
+			</div>
 			<div class="screen">
+				<div class="statubar">
+					<img id="battery" src="battery.png"></img>
+					<img id="wifi" src="wifi.png"></img>
+					<img id="signal" src="signal.png"></img>
+					<div id="camera">
+					</div>
+				</div>
 				<div class="screen_lock">
 						<img id="lock" src="lock.png"></img>
 						<div id="hours">
@@ -16,11 +37,30 @@
 						</div>
 				</div>
 				<div class="screen_unlock">
-						<img id="battery" src="battery.png"></img>
-						<img id="wifi" src="wifi.png"></img>
-						<img id="signal" src="signal.png"></img>
-					<div id="camera">
+					<div class="app_message">
+						<div class="chatbox">
+							<div class="chatlogs">
+								<div class="chat">
+									<div class="user_photo"></div>
+									<p class="chat_message">Wsh ca va ?</p>
+								</div>
+								<div class="chat">
+									<div class="user_photo"></div>
+									<p class="chat_message">Tranquille</p>
+								</div>
+							</div>
+							<div class="chat_form">
+								<textarea></textarea>
+								<button>Send</button>
+							</div>
+						</div>
+						<img id="ic_message" src="app_message.png"></img>
 					</div>
+					<img id="app_call" src="app_call.png"></img>
+					<img id="app_contact" src="app_contact.png"></img>
+					<img id="app_internet" src="app_internet.png"></img>
+					<img id="app_bank" src="app_bank.png"></img>
+					<img id="app_setting" src="app_setting.png"></img>
 				</div>
 			</div>
 		</div>

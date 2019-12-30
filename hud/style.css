@@ -45,19 +45,21 @@
 }
 
 #money {
-	top: -50%;
+	top: 15%;
 	right: 47%;
 	transform: translate(50%);
 	position: absolute;
 	color: #ffffff;
+	font-size: 22px;
 	font-family: Impact;
 }
 
 #hp {
 	position: absolute;
-	top: -36%;
-	left: 47%;
+	top: 16%;
+	left: 48%;
 	color: #ffffff;
+	font-size: 22px;
 	font-family: Impact;
 }
 
@@ -68,6 +70,7 @@
 	height: 27px;
 	border-radius: 14px;
 	background-color: #14bf15;
+	transition: width 1.2s ease-out;
 	position: absolute;
 }
 
@@ -78,8 +81,10 @@
 	width: calc(var(--width, 0) * 1%);
 	height: 5px;
 	border-radius: 3px;
+	transition: width 1.2s ease-out;
 	background-color: #19d21a;
 }
+
 
 #back_life_bar {
 	top: 17%;
@@ -98,6 +103,7 @@
 	width: calc(var(--width, 0) * 1%);
 	height: 12px;
 	border-radius: 6px;
+	transition: width 1.2s ease-out;
 	/*background-color: #1954ff;*/
 	background-color: #2295fa;
 }
@@ -109,6 +115,7 @@
 	width: calc(var(--width, 0) * 1%);
 	height: 3px;
 	border-radius: 2px;
+	transition: width 1.2s ease-out;
 	/*background-color: #3669ff;*/
 	background-color: #4f9ffb;
 }
