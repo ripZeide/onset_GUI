@@ -7,25 +7,32 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   	<script type="text/javascript" src="app.js"> </script>
 	<script type="text/javascript">
+
 		$(document).ready(function(){
-			$('.app_homescreen').toggleClass('active');
+			$('.app_homescreen').toggleClass('active_screen');
 
 			$('#ic_message').click(function(){
-				$('.app_homescreen').toggleClass('active');
-				$('.app_message').toggleClass('active');
+				$('.app_homescreen').toggleClass('active_screen');
+				$('.app_message').toggleClass('active_screen');
+				$('.chatlogs').animate({scrollTop: $('.chatlogs').height()}, 1)
+				// $('.chatbox').scrollBottom();
 			})
 
 
 			let timeout_lock;
 			$('.screen').hover(function(e) {
-				$('.screen_unlock').addClass('active')
-				clearTimeout(timeout_lock)
+				$('.screen_unlock').addClass('active_screen');
+				$('.tab_bar').addClass('active_tab_bar');
+				$('.statubar').addClass('active_status_bar');
+				clearTimeout(timeout_lock);
 			})
 
 			$('.screen').mouseleave(() => {
 				timeout_lock = setTimeout(() => {
-					$('.screen_unlock').removeClass('active')
-				}, 15000);	
+					$('.screen_unlock').removeClass('active_screen');
+					$('.tab_bar').removeClass('active_tab_bar');
+					$('.statubar').removeClass('active_status_bar');
+				}, 150);	
 			})
 		})
 	</script>
@@ -37,14 +44,14 @@
 				<div id="volume_plus"></div>
 				<div id="volume_less"></div>
 				<div id="power_off"></div>
+				<div class="tab_bar"></div>
 			</div>
 			<div class="screen">
+				<div id="camera"></div>
 				<div class="statubar">
 					<img id="battery" src="battery.png"></img>
 					<img id="wifi" src="wifi.png"></img>
 					<img id="signal" src="signal.png"></img>
-					<div id="camera">
-					</div>
 				</div>
 				<div class="screen_lock">
 						<img id="lock" src="lock.png"></img>
@@ -68,6 +75,15 @@
 									<div class="user_photo"></div>
 									<p class="chat_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 								</div>
+								<div class="chat friend">
+									<div class="user_photo"></div>
+									<p class="chat_message">Wsh ca va ?</p>
+								</div>
+								<div class="chat user">
+									<div class="user_photo"></div>
+									<p class="chat_message">Tranquille</p>
+								</div>
+								<div class="spacer"> </div>
 							</div>
 							<div class="chat_form">
 								<textarea></textarea>
@@ -87,5 +103,6 @@
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>
